@@ -7,6 +7,7 @@ body{
     background-color: #161616;
     font-family: 'Signika', sans-serif;
     color: #F1D4D4;
+    user-select: none;
 }
 
 .title{
