@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #161616;
+    font-family: 'Signika', sans-serif;
+    color: #F1D4D4;
+}
+
+.title{
+    max-width: 500px;
+}
+
+.wrapper{
+    max-width: 1440px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.restart{
+    width: 175px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F1D4D4;
+    border-radius: 50px;
+    transition: all .2s ease;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.restart:hover{
+    color: #161616;
+    background-color: #F1D4D4;
+}
+
+.game{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    color: #F1D4D4;
+    font-size: 24px;
+}
+
+.player-X{
+    flex:1;
+    font-weight: bold;
+    border-bottom: 5px solid #F1D4D4;
+    padding-bottom: 8px;
+}
+
+.player-X.active{
+    color: #FFA069;
+    border-color: #FFA069;
+}
+
+.player-O{
+    flex:1;
+    font-weight: bold;
+    border-bottom: 5px solid #F1D4D4;
+    padding-bottom: 8px;
+}
+
+.player-O.active{
+    color: #E93B81;
+    border-color: #E93B81;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    background-color: #161616;
+    cursor: pointer;
+}
+
+.board-tile:not(:nth-child(3n)){
+    border-right: 3px solid #F1D4D4;
+}
+
+.board-tile:not(:nth-last-child(-n +3)){
+    border-bottom: 3px solid #F1D4D4;
+}
+
+.board-tile:hover{
+    background-color: #444444;
+}
+
+.tile-X{
+    color: #FFA069;
+}
+
+.tile-O{
+    color: #E93B81;
+}
+
+.tile-winner span{
+    color: #23ce6b;
+}
+
+@media only screen and (max-width:1200px){
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .game{
+        width: 400px;
+        height: 400px;
+    }
+
+    .left{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .board-tile:hover{
+        background-color: inherit;
+    }
+}
