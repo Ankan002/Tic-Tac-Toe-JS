@@ -146,8 +146,13 @@ h1{
         background-color: inherit;
     }
 
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+
     .game{
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
     }
 }
